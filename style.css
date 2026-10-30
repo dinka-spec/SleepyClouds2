@@ -1,0 +1,55 @@
+*{box-sizing:border-box}
+:root{--ink:#53647d;--muted:#8292aa;--blue:#8caedb;--pink:#f0c9dc;--glass:rgba(255,255,255,.62)}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:"Nunito",sans-serif;color:var(--ink);background:linear-gradient(135deg,#e8f3ff 0%,#f7effa 48%,#e9f5ff 100%);overflow-x:hidden}
+button,a{font:inherit}
+a{color:inherit;text-decoration:none}
+.sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.cloud{position:absolute;width:260px;height:78px;border-radius:60px;background:rgba(255,255,255,.55);filter:blur(1px);box-shadow:0 18px 50px rgba(141,174,211,.12);animation:drift 34s ease-in-out infinite alternate}
+.cloud:before,.cloud:after{content:"";position:absolute;background:inherit;border-radius:50%}
+.cloud:before{width:112px;height:112px;left:36px;top:-49px}.cloud:after{width:145px;height:145px;right:30px;top:-72px}
+.cloud-a{top:20%;left:-70px;transform:scale(1.1)}.cloud-b{top:68%;right:-90px;animation-delay:-9s;transform:scale(1.4)}
+.cloud-c{top:4%;right:18%;animation-delay:-17s;transform:scale(.7)}.cloud-d{top:47%;left:39%;animation-delay:-22s;transform:scale(.55)}
+@keyframes drift{from{translate:-25px 0}to{translate:55px 22px}}
+.sparkle{position:absolute;color:#fff;font-size:25px;text-shadow:0 0 18px #a8c6ed;animation:twinkle 3.4s ease-in-out infinite}
+.s1{top:24%;left:18%}.s2{top:15%;right:20%;animation-delay:1s}.s3{top:72%;left:76%;animation-delay:2s}.s4{top:57%;left:11%;animation-delay:.6s}
+@keyframes twinkle{50%{opacity:.35;transform:scale(.75) rotate(18deg)}}
+.topbar{width:min(1160px,calc(100% - 40px));margin:22px auto 0;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:rgba(255,255,255,.48);border:1px solid rgba(255,255,255,.75);border-radius:22px;backdrop-filter:blur(18px);box-shadow:0 12px 35px rgba(116,151,194,.09);animation:appear .7s both}
+.brand{font-weight:900;letter-spacing:.2px;white-space:nowrap}.brand-mark{color:#8fb6e7;font-size:23px;vertical-align:-2px;margin-right:6px}
+nav{display:flex;gap:7px}.nav-link{border:0;background:transparent;color:#7d8ca4;padding:10px 15px;border-radius:14px;cursor:pointer;font-weight:800;transition:.25s}
+.nav-link:hover,.nav-link.active{background:rgba(255,255,255,.8);color:#627fa7;transform:translateY(-1px)}
+.join-small{font-size:13px;font-weight:900;padding:11px 16px;border-radius:14px;background:#fff;color:#718db4;box-shadow:0 5px 16px #a9c5e522;transition:.25s;white-space:nowrap}.join-small:hover{transform:translateY(-3px);box-shadow:0 10px 22px #a9c5e544}
+main{width:min(1160px,calc(100% - 40px));margin:auto;min-height:calc(100vh - 145px)}
+.page{display:none}.page.active{display:block;animation:appear .65s both}
+@keyframes appear{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.home-page{min-height:calc(100vh - 180px);display:none;align-items:center;justify-content:center;position:relative;text-align:center}.home-page.active{display:flex}
+.hero{padding:90px 20px 115px}
+.eyebrow{font-size:10px;letter-spacing:3px;font-weight:900;color:#91a7c5;display:flex;align-items:center;justify-content:center;gap:9px}
+.eyebrow span{width:6px;height:6px;border-radius:50%;background:#d9aeca;box-shadow:0 0 0 5px #f2dce955}
+h1{font-size:clamp(58px,10vw,112px);line-height:1.04;letter-spacing:-5px;margin:24px 0 17px;color:#718eB7;font-weight:900;text-shadow:0 8px 30px #a8c4e533}
+h1 span,h2 span{color:#d6a9c5}
+.hero-copy{font-size:18px;line-height:1.8;color:#8191a8;margin:0}
+.hero-actions{display:flex;justify-content:center;gap:13px;margin-top:32px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:13px;border:0;border-radius:16px;padding:15px 22px;font-weight:900;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.button:hover{transform:translateY(-4px) scale(1.02)}
+.button.primary{color:white;background:linear-gradient(120deg,#9bbce5,#c5b4df);box-shadow:0 12px 26px #9bbce54d}
+.button.primary:hover{box-shadow:0 17px 30px #9bbce577}
+.button.secondary{color:#7893b8;background:rgba(255,255,255,.72);box-shadow:0 10px 24px #9bbce522}
+.hero-note{margin-top:40px;font-size:10px;letter-spacing:2.5px;color:#a1aec0;font-weight:900}.hero-note span{font-size:18px;color:#9abce6;vertical-align:-2px;margin-right:5px}
+.bottom-hint{position:absolute;bottom:30px;left:0;right:0;font-size:9px;letter-spacing:3px;color:#9baec6;font-weight:900}.bottom-hint span{display:block;font-size:18px;margin-top:7px}
+.shop-page{padding:76px 0 80px}.shop-heading{text-align:center;margin-bottom:38px}.shop-heading h2{font-size:clamp(42px,7vw,68px);letter-spacing:-2px;margin:15px 0 5px;color:#718eb6;font-weight:900}.shop-heading p{color:#8797ad;margin:0;font-size:15px}
+.price-legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:22px;color:#8292a8;font-size:12px;font-weight:800}.price-legend span{display:flex;align-items:center;gap:7px}.coin,.ruble{font-style:normal;display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#fff;color:#8eacd5;font-size:13px}.ruble{color:#c99ab9}
+.role-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.role-group{padding:21px;border:1px solid #fff;background:rgba(255,255,255,.54);border-radius:24px;backdrop-filter:blur(15px);box-shadow:0 12px 34px rgba(124,157,196,.08);animation:appear .6s both}
+.group-title{display:flex;align-items:center;gap:10px;margin:0 0 15px;font-size:17px;color:#718bad;font-weight:900}.group-title .group-icon{font-size:22px}
+.role-list{display:grid;gap:8px}
+.role-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;padding:12px 13px;border-radius:15px;background:rgba(255,255,255,.68);border:1px solid transparent;transition:transform .22s,box-shadow .22s,border-color .22s}
+.role-card:hover{transform:translateY(-3px);border-color:#fff;box-shadow:0 9px 22px rgba(137,166,205,.16)}
+.role-name{font-size:13px;font-weight:900;color:#687f9e}.role-name span{font-size:17px;margin-right:7px;vertical-align:-2px}
+.role-prices{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.price{font-size:11px;font-weight:900;border-radius:10px;padding:7px 9px;background:#edf5ff;color:#7795bd;white-space:nowrap}
+.price.cash{background:#fbf0f7;color:#bd8eac}
+.shop-footnote{text-align:center;color:#8d9bb0;font-size:12px;margin:28px auto 17px;max-width:650px;line-height:1.7}.shop-contact{display:flex;width:max-content;margin:0 auto}
+footer{width:min(1160px,calc(100% - 40px));margin:0 auto;padding:18px 3px 24px;display:flex;justify-content:space-between;color:#9baac0;font-size:10px;letter-spacing:1px;font-weight:800}
+@media(max-width:760px){.topbar{flex-wrap:wrap;justify-content:center;margin-top:12px}.brand{width:100%;text-align:center}nav{order:3;width:100%;justify-content:center}.join-small{position:absolute;right:28px;top:25px;font-size:11px;padding:8px 10px}.role-groups{grid-template-columns:1fr}.shop-page{padding-top:48px}h1{letter-spacing:-3px}.hero-copy{font-size:15px}.desktop-only{display:none}}
+@media(max-width:430px){.topbar{width:calc(100% - 20px);padding:12px 8px}.join-small{display:none}.nav-link{padding:9px 12px;font-size:12px}.role-group{padding:15px}.role-card{padding:10px}.role-prices{gap:5px}.price{font-size:10px;padding:6px 7px}.hero{padding:75px 5px 100px}footer{font-size:9px}}

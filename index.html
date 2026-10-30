@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#dcecff">
+  <title>Sleepy Clouds — уютное место в Discord</title>
+  <meta name="description" content="Sleepy Clouds — уютное Discord-сообщество и магазин ролей.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+    <div class="cloud cloud-c"></div><div class="cloud cloud-d"></div>
+    <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span>
+    <span class="sparkle s3">✦</span><span class="sparkle s4">✧</span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home"><span class="brand-mark">☁</span> Sleepy Clouds</a>
+    <nav>
+      <button class="nav-link active" data-page="home">Главная</button>
+      <button class="nav-link" data-page="shop">Магазин ролей</button>
+    </nav>
+    <a class="join-small" href="https://discord.gg/UkDbwsJZM" target="_blank" rel="noopener">Войти в Discord ↗</a>
+  </header>
+
+  <main>
+    <section class="page home-page active" id="home">
+      <div class="hero">
+        <div class="eyebrow"><span></span> YOUR LITTLE CLOUD COMMUNITY</div>
+        <h1>Sleepy <span>Clouds</span></h1>
+        <p class="hero-copy">Место, где можно отдохнуть от суеты,<br class="desktop-only"> найти компанию и просто быть собой.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://discord.gg/UkDbwsJZM" target="_blank" rel="noopener">Перейти на сервер <span>↗</span></a>
+          <button class="button secondary" data-page="shop">Магазин ролей <span>✧</span></button>
+        </div>
+        <div class="hero-note"><span>☁</span> take a breath · stay a little</div>
+      </div>
+      <div class="bottom-hint">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="page shop-page" id="shop">
+      <div class="shop-heading">
+        <div class="eyebrow"><span></span> SLEEPY CLOUDS STORE</div>
+        <h2>Магазин <span>ролей</span></h2>
+        <p>Выбери роль, которая отражает твоё настроение.</p>
+        <div class="price-legend">
+          <span><b class="coin">☁</b> Валюта сервера</span>
+          <span><b class="ruble">₽</b> Реальные рубли</span>
+        </div>
+      </div>
+      <div id="role-groups" class="role-groups"></div>
+      <p class="shop-footnote">Покупка оформляется через администрацию сервера. Перед оплатой уточни наличие роли и способ получения.</p>
+      <a class="button primary shop-contact" href="https://discord.gg/UkDbwsJZM" target="_blank" rel="noopener">Перейти в Discord для покупки ↗</a>
+    </section>
+  </main>
+
+  <footer><span>☁ Sleepy Clouds</span><span>made for peaceful moments</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
